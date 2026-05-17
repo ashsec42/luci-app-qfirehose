@@ -1,0 +1,212 @@
+msgid ""
+msgstr ""
+"Language-Team: Rafał Wabik (IceG)\n"
+"Language: lt\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "QFirehose"
+msgstr "QFirehose"
+
+msgid "Qualcomm firmware flash tool for Quectel modems. Supports firmware directory, zip and 7z packages."
+msgstr "Strumento di flash del firmware Qualcomm per modem Quectel. Supporta directory firmware, pacchetti zip e 7z."
+
+msgid "Tool Version"
+msgstr "Versione dello strumento"
+
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+msgid "Status"
+msgstr "Stato"
+
+msgid "Idle"
+msgstr "Inattivo"
+
+msgid "Flashing"
+msgstr "Flash in corso"
+
+msgid "Success"
+msgstr "Successo"
+
+msgid "Failed"
+msgstr "Fallito"
+
+msgid "Error"
+msgstr "Errore"
+
+msgid "Flashing..."
+msgstr "Flash in corso..."
+
+msgid "Firmware File"
+msgstr "File del firmware"
+
+msgid "Upload firmware or enter path..."
+msgstr "Carica firmware o inserisci percorso..."
+
+msgid "Select File"
+msgstr "Seleziona file"
+
+msgid "Uploading..."
+msgstr "Caricamento in corso..."
+
+msgid "File uploaded successfully."
+msgstr "File caricato con successo."
+
+msgid "File upload failed."
+msgstr "Caricamento del file fallito."
+
+msgid "Supports .zip, .7z packages and firmware directories"
+msgstr "Supporta pacchetti .zip, .7z e directory firmware"
+
+msgid "Device Settings"
+msgstr "Impostazioni del dispositivo"
+
+msgid "Communication Port"
+msgstr "Porta di comunicazione"
+
+msgid "USB Device"
+msgstr "Dispositivo USB"
+
+msgid "Device Type"
+msgstr "Tipo di dispositivo"
+
+msgid "Auto Detect"
+msgstr "Rilevamento automatico"
+
+msgid "NAND (Default)"
+msgstr "NAND (Predefinito)"
+
+msgid "eMMC"
+msgstr "eMMC"
+
+msgid "UFS"
+msgstr "UFS"
+
+msgid "Advanced Options"
+msgstr "Opzioni avanzate"
+
+msgid "Skip MD5 Check"
+msgstr "Salta controllo MD5"
+
+msgid "Skip MD5 checksum verification"
+msgstr "Salta verifica checksum MD5"
+
+msgid "Signed Firmware"
+msgstr "Firmware firmato"
+
+msgid "For AG215S-GLR signed firmware packages"
+msgstr "Per pacchetti firmware firmati AG215S-GLR"
+
+msgid "Erase All Before Download"
+msgstr "Cancella tutto prima del download"
+
+msgid "Erase ALL data including calibration data — modem may become permanently unusable!"
+msgstr "Cancella TUTTI i dati inclusi i dati di calibrazione — il modem potrebbe diventare permanentemente inutilizzabile!"
+
+msgid "Flash Firmware"
+msgstr "Flash del firmware"
+
+msgid "Flash Log"
+msgstr "Registro del flash"
+
+msgid "Copy"
+msgstr "Copia"
+
+msgid "Clear"
+msgstr "Cancella"
+
+msgid "Log copied to clipboard."
+msgstr "Registro copiato negli appunti."
+
+msgid "Please select a firmware file first."
+msgstr "Seleziona prima un file del firmware."
+
+msgid "Danger"
+msgstr "Pericolo"
+
+msgid "You have enabled \"Erase All Before Download\"!"
+msgstr "Hai abilitato \"Cancella tutto prima del download\"!"
+
+msgid "This will erase ALL data on the modem, including calibration data. The modem may become permanently unusable if calibration data is lost."
+msgstr "Questo cancellerà TUTTI i dati sul modem, inclusi i dati di calibrazione. Il modem potrebbe diventare permanentemente inutilizzabile se i dati di calibrazione vengono persi."
+
+msgid "Are you absolutely sure you want to continue?"
+msgstr "Sei assolutamente sicuro di voler continuare?"
+
+msgid "I understand the risk, continue"
+msgstr "Comprendo il rischio, continua"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Confirm Firmware Flash"
+msgstr "Conferma flash del firmware"
+
+msgid "Please ensure before proceeding:"
+msgstr "Assicurati prima di procedere:"
+
+msgid "The firmware is from official channels and compatible with your modem."
+msgstr "Il firmware proviene da canali ufficiali ed è compatibile con il tuo modem."
+
+msgid "The firmware version should be higher than the current version."
+msgstr "La versione del firmware dovrebbe essere superiore alla versione attuale."
+
+msgid "Flashing wrong firmware can brick your modem permanently."
+msgstr "Il flash di un firmware errato può rendere il modem permanentemente inutilizzabile."
+
+msgid "Do not flash if you are not willing to take this risk."
+msgstr "Non eseguire il flash se non sei disposto a correre questo rischio."
+
+msgid "Additional notes..."
+msgstr "Note aggiuntive..."
+
+msgid "After flashing, use AT&F command to factory reset modem settings."
+msgstr "Dopo il flash, usa il comando AT&F per ripristinare le impostazioni del modem ai valori di fabbrica."
+
+msgid "mPCIe users: If modem disappears after flashing, it may have switched to USB3 mode. Use mPCIe-to-USB adapter and send AT+QUSBCFG=\"SS\",0 to switch back to USB2."
+msgstr "Utenti mPCIe: Se il modem scompare dopo il flash, potrebbe essere passato alla modalità USB3. Usa un adattatore mPCIe-USB e invia AT+QUSBCFG=\"SS\",0 per tornare a USB2."
+
+msgid "Continue"
+msgstr "Continua"
+
+msgid "Starting firmware flash process..."
+msgstr "Avvio del processo di flash del firmware..."
+
+msgid "Failed to start flash process: "
+msgstr "Impossibile avviare il processo di flash: "
+
+msgid "Firmware upgrade completed successfully!"
+msgstr "Aggiornamento del firmware completato con successo!"
+
+msgid "Firmware upgrade failed."
+msgstr "Aggiornamento del firmware fallito."
+
+msgid "Refresh Devices"
+msgstr "Aggiorna dispositivi"
+
+msgid "Refreshing..."
+msgstr "Aggiornamento in corso..."
+
+msgid "Reset"
+msgstr "Ripristina"
+
+msgid "Waiting for flash process to start..."
+msgstr "In attesa dell'avvio del processo di flash..."
+
+msgid "Capture USBMon Log"
+msgstr "Acquisisci registro USBMon"
+
+msgid "Capture USB monitor log for debugging (-u)"
+msgstr "Acquisisci registro di monitoraggio USB per il debug (-u)"
+
+msgid "Modem Model"
+msgstr "Modello del modem"
+
+msgid "Current Firmware"
+msgstr "Firmware attuale"
+
+msgid "Not detected"
+msgstr "Non rilevato"

@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# Get modem information (model name, firmware version)
+# Query via AT commands, requires sms_tool
+# Output format: one key=value pair per line
+#
+# 获取模组信息（模组名称、固件版本）
+# 通过 AT 命令查询，需要 sms_tool 工具
+# 输出格式：每行一个 key=value
+
+# List of AT ports to try (prioritize ttyUSB2, Quectel modules usually use USB2 for AT)
+# 尝试的 AT 端口列表（优先 ttyUSB2，移远模组通常用 USB2 作 AT 口）
+AT_PORTS="/dev/ttyUSB2 /dev/ttyUSB1 /dev/ttyUSB3 /dev/ttyUSB0"
+
+# Try each port
+# 尝试各个端口
+for DEVICE in $AT_PORTS; do
+    [ -c "$DEVICE" ] || continue
+
+    # Get modem model (ATI command)
+    # 获取模组型号（ATI 命令）
+    O=$(sms_tool -d "$DEVICE" at "ATI" 2>/dev/null)
+    model=$(echo "$O" | sed -n '3p' | tr -d '\r')
+
+    # Get firmware version (AT+CGMR or AT+QGMR)
+    # 获取固件版本（AT+CGMR 或 AT+QGMR）
+    O=$(sms_tool -d "$DEVICE" at "AT+CGMR" 2>/dev/null)
+    if echo "$O" | grep -q "OK"; then
+        firmware=$(echo "$O" | sed -n '2p' | tr -d '\r')
+    else
+        O=$(sms_tool -d "$DEVICE" at "AT+QGMR" 2>/dev/null)
+        firmware=$(echo "$O" | sed -n '2p' | tr -d '\r')
+    fi
+
+    # Get IMEI (optional)
+    # 获取 IMEI（可选）
+    O=$(sms_tool -d "$DEVICE" at "AT+CGSN" 2>/dev/null)
+    if echo "$O" | grep -q "OK"; then
+        imei=$(echo "$O" | sed -n '2p' | tr -d '\r')
+    fi
+
+    echo "model=${model:-N/A}"
+    echo "firmware=${firmware:-N/A}"
+    [ -n "$imei" ] && echo "imei=$imei"
+    echo "port=$DEVICE"
+    exit 0
+done
+
+# No available port found
+# 没有找到可用端口
+echo "model=N/A"
+echo "firmware=N/A"
+echo "error=No AT port found"

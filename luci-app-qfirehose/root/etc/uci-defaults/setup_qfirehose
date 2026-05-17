@@ -1,0 +1,12 @@
+#!/bin/sh
+# Copyright 2025-2026 Rafał Wabik (IceG) - From eko.one.pl forum
+# Licensed to the GNU General Public License v3.0.
+
+chmod +x /usr/sbin/qfirehose-modem-info >/dev/null 2>&1 &
+chmod +x /usr/sbin/qfirehose-start >/dev/null 2>&1 &
+chmod +x /usr/sbin/qfirehose-status >/dev/null 2>&1 &
+mkdir -p /var/log/qfirehose >/dev/null 2>&1 &
+chmod 755 /var/log/qfirehose >/dev/null 2>&1 &
+chmod +x /var/log/qfirehose >/dev/null 2>&1 &
+mkdir -p /tmp/qfirehoseupload >/dev/null 2>&1 &
+exit 0

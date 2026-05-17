@@ -1,0 +1,212 @@
+msgid ""
+msgstr ""
+"Language-Team: Rafał Wabik (IceG)\n"
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "QFirehose"
+msgstr "QFirehose"
+
+msgid "Qualcomm firmware flash tool for Quectel modems. Supports firmware directory, zip and 7z packages."
+msgstr "Инструмент для прошивки Qualcomm для модемов Quectel. Поддерживает каталоги прошивок, пакеты zip и 7z."
+
+msgid "Tool Version"
+msgstr "Версия инструмента"
+
+msgid "Unknown"
+msgstr "Неизвестно"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Idle"
+msgstr "Ожидание"
+
+msgid "Flashing"
+msgstr "Прошивка"
+
+msgid "Success"
+msgstr "Успешно"
+
+msgid "Failed"
+msgstr "Не удалось"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Flashing..."
+msgstr "Прошивка..."
+
+msgid "Firmware File"
+msgstr "Файл прошивки"
+
+msgid "Upload firmware or enter path..."
+msgstr "Загрузите прошивку или введите путь..."
+
+msgid "Select File"
+msgstr "Выбрать файл"
+
+msgid "Uploading..."
+msgstr "Загрузка..."
+
+msgid "File uploaded successfully."
+msgstr "Файл успешно загружен."
+
+msgid "File upload failed."
+msgstr "Не удалось загрузить файл."
+
+msgid "Supports .zip, .7z packages and firmware directories"
+msgstr "Поддерживает пакеты .zip, .7z и каталоги прошивок"
+
+msgid "Device Settings"
+msgstr "Настройки устройства"
+
+msgid "Communication Port"
+msgstr "Порт связи"
+
+msgid "USB Device"
+msgstr "USB-устройство"
+
+msgid "Device Type"
+msgstr "Тип устройства"
+
+msgid "Auto Detect"
+msgstr "Автоопределение"
+
+msgid "NAND (Default)"
+msgstr "NAND (По умолчанию)"
+
+msgid "eMMC"
+msgstr "eMMC"
+
+msgid "UFS"
+msgstr "UFS"
+
+msgid "Advanced Options"
+msgstr "Расширенные параметры"
+
+msgid "Skip MD5 Check"
+msgstr "Пропустить проверку MD5"
+
+msgid "Skip MD5 checksum verification"
+msgstr "Пропустить проверку контрольной суммы MD5"
+
+msgid "Signed Firmware"
+msgstr "Подписанная прошивка"
+
+msgid "For AG215S-GLR signed firmware packages"
+msgstr "Для подписанных пакетов прошивки AG215S-GLR"
+
+msgid "Erase All Before Download"
+msgstr "Стереть всё перед загрузкой"
+
+msgid "Erase ALL data including calibration data — modem may become permanently unusable!"
+msgstr "Стереть ВСЕ данные, включая данные калибровки — модем может стать навсегда непригодным к использованию!"
+
+msgid "Flash Firmware"
+msgstr "Прошить прошивку"
+
+msgid "Flash Log"
+msgstr "Журнал прошивки"
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Clear"
+msgstr "Очистить"
+
+msgid "Log copied to clipboard."
+msgstr "Журнал скопирован в буфер обмена."
+
+msgid "Please select a firmware file first."
+msgstr "Сначала выберите файл прошивки."
+
+msgid "Danger"
+msgstr "Опасность"
+
+msgid "You have enabled \"Erase All Before Download\"!"
+msgstr "Вы включили \"Стереть всё перед загрузкой\"!"
+
+msgid "This will erase ALL data on the modem, including calibration data. The modem may become permanently unusable if calibration data is lost."
+msgstr "Это сотрёт ВСЕ данные на модеме, включая данные калибровки. Модем может стать навсегда непригодным к использованию, если данные калибровки будут утеряны."
+
+msgid "Are you absolutely sure you want to continue?"
+msgstr "Вы абсолютно уверены, что хотите продолжить?"
+
+msgid "I understand the risk, continue"
+msgstr "Я понимаю риск, продолжить"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Confirm Firmware Flash"
+msgstr "Подтвердите прошивку"
+
+msgid "Please ensure before proceeding:"
+msgstr "Перед продолжением убедитесь:"
+
+msgid "The firmware is from official channels and compatible with your modem."
+msgstr "Прошивка из официальных источников и совместима с вашим модемом."
+
+msgid "The firmware version should be higher than the current version."
+msgstr "Версия прошивки должна быть выше текущей версии."
+
+msgid "Flashing wrong firmware can brick your modem permanently."
+msgstr "Прошивка неправильной прошивкой может навсегда вывести из строя ваш модем."
+
+msgid "Do not flash if you are not willing to take this risk."
+msgstr "Не прошивайте, если вы не готовы взять на себя этот риск."
+
+msgid "Additional notes..."
+msgstr "Дополнительные примечания..."
+
+msgid "After flashing, use AT&F command to factory reset modem settings."
+msgstr "После прошивки используйте команду AT&F для сброса настроек модема до заводских."
+
+msgid "mPCIe users: If modem disappears after flashing, it may have switched to USB3 mode. Use mPCIe-to-USB adapter and send AT+QUSBCFG=\"SS\",0 to switch back to USB2."
+msgstr "Пользователи mPCIe: Если модем исчезает после прошивки, возможно, он переключился в режим USB3. Используйте адаптер mPCIe-USB и отправьте AT+QUSBCFG=\"SS\",0, чтобы вернуться к USB2."
+
+msgid "Continue"
+msgstr "Продолжить"
+
+msgid "Starting firmware flash process..."
+msgstr "Запуск процесса прошивки..."
+
+msgid "Failed to start flash process: "
+msgstr "Не удалось запустить процесс прошивки: "
+
+msgid "Firmware upgrade completed successfully!"
+msgstr "Обновление прошивки успешно завершено!"
+
+msgid "Firmware upgrade failed."
+msgstr "Не удалось обновить прошивку."
+
+msgid "Refresh Devices"
+msgstr "Обновить устройства"
+
+msgid "Refreshing..."
+msgstr "Обновление..."
+
+msgid "Reset"
+msgstr "Сброс"
+
+msgid "Waiting for flash process to start..."
+msgstr "Ожидание запуска процесса прошивки..."
+
+msgid "Capture USBMon Log"
+msgstr "Захватить журнал USBMon"
+
+msgid "Capture USB monitor log for debugging (-u)"
+msgstr "Захватить журнал монитора USB для отладки (-u)"
+
+msgid "Modem Model"
+msgstr "Модель модема"
+
+msgid "Current Firmware"
+msgstr "Текущая прошивка"
+
+msgid "Not detected"
+msgstr "Не обнаружено"

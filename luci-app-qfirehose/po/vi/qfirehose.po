@@ -1,0 +1,211 @@
+msgid ""
+msgstr ""
+"Language-Team: Rafał Wabik (IceG)\n"
+"Language: vi\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "QFirehose"
+msgstr "QFirehose"
+
+msgid "Qualcomm firmware flash tool for Quectel modems. Supports firmware directory, zip and 7z packages."
+msgstr "Công cụ flash firmware Qualcomm cho modem Quectel. Hỗ trợ thư mục firmware, gói zip và 7z."
+
+msgid "Tool Version"
+msgstr "Phiên bản công cụ"
+
+msgid "Unknown"
+msgstr "Không xác định"
+
+msgid "Status"
+msgstr "Trạng thái"
+
+msgid "Idle"
+msgstr "Rảnh"
+
+msgid "Flashing"
+msgstr "Đang flash"
+
+msgid "Success"
+msgstr "Thành công"
+
+msgid "Failed"
+msgstr "Thất bại"
+
+msgid "Error"
+msgstr "Lỗi"
+
+msgid "Flashing..."
+msgstr "Đang flash..."
+
+msgid "Firmware File"
+msgstr "Tệp firmware"
+
+msgid "Upload firmware or enter path..."
+msgstr "Tải lên firmware hoặc nhập đường dẫn..."
+
+msgid "Select File"
+msgstr "Chọn tệp"
+
+msgid "Uploading..."
+msgstr "Đang tải lên..."
+
+msgid "File uploaded successfully."
+msgstr "Tệp đã được tải lên thành công."
+
+msgid "File upload failed."
+msgstr "Tải lên tệp thất bại."
+
+msgid "Supports .zip, .7z packages and firmware directories"
+msgstr "Hỗ trợ gói .zip, .7z và thư mục firmware"
+
+msgid "Device Settings"
+msgstr "Cài đặt thiết bị"
+
+msgid "Communication Port"
+msgstr "Cổng giao tiếp"
+
+msgid "USB Device"
+msgstr "Thiết bị USB"
+
+msgid "Device Type"
+msgstr "Loại thiết bị"
+
+msgid "Auto Detect"
+msgstr "Tự động phát hiện"
+
+msgid "NAND (Default)"
+msgstr "NAND (Mặc định)"
+
+msgid "eMMC"
+msgstr "eMMC"
+
+msgid "UFS"
+msgstr "UFS"
+
+msgid "Advanced Options"
+msgstr "Tùy chọn nâng cao"
+
+msgid "Skip MD5 Check"
+msgstr "Bỏ qua kiểm tra MD5"
+
+msgid "Skip MD5 checksum verification"
+msgstr "Bỏ qua xác minh mã kiểm tra MD5"
+
+msgid "Signed Firmware"
+msgstr "Firmware đã ký"
+
+msgid "For AG215S-GLR signed firmware packages"
+msgstr "Dành cho gói firmware đã ký AG215S-GLR"
+
+msgid "Erase All Before Download"
+msgstr "Xóa tất cả trước khi tải xuống"
+
+msgid "Erase ALL data including calibration data — modem may become permanently unusable!"
+msgstr "Xóa TẤT CẢ dữ liệu bao gồm dữ liệu hiệu chuẩn — modem có thể trở nên không thể sử dụng vĩnh viễn!"
+
+msgid "Flash Firmware"
+msgstr "Flash firmware"
+
+msgid "Flash Log"
+msgstr "Nhật ký flash"
+
+msgid "Copy"
+msgstr "Sao chép"
+
+msgid "Clear"
+msgstr "Xóa"
+
+msgid "Log copied to clipboard."
+msgstr "Nhật ký đã được sao chép vào clipboard."
+
+msgid "Please select a firmware file first."
+msgstr "Vui lòng chọn tệp firmware trước."
+
+msgid "Danger"
+msgstr "Nguy hiểm"
+
+msgid "You have enabled \"Erase All Before Download\"!"
+msgstr "Bạn đã bật \"Xóa tất cả trước khi tải xuống\"!"
+
+msgid "This will erase ALL data on the modem, including calibration data. The modem may become permanently unusable if calibration data is lost."
+msgstr "Điều này sẽ xóa TẤT CẢ dữ liệu trên modem, bao gồm dữ liệu hiệu chuẩn. Modem có thể trở nên không thể sử dụng vĩnh viễn nếu dữ liệu hiệu chuẩn bị mất."
+
+msgid "Are you absolutely sure you want to continue?"
+msgstr "Bạn có hoàn toàn chắc chắn muốn tiếp tục không?"
+
+msgid "I understand the risk, continue"
+msgstr "Tôi hiểu rủi ro, tiếp tục"
+
+msgid "Cancel"
+msgstr "Hủy"
+
+msgid "Confirm Firmware Flash"
+msgstr "Xác nhận flash firmware"
+
+msgid "Please ensure before proceeding:"
+msgstr "Vui lòng đảm bảo trước khi tiếp tục:"
+
+msgid "The firmware is from official channels and compatible with your modem."
+msgstr "Firmware đến từ các kênh chính thức và tương thích với modem của bạn."
+
+msgid "The firmware version should be higher than the current version."
+msgstr "Phiên bản firmware nên cao hơn phiên bản hiện tại."
+
+msgid "Flashing wrong firmware can brick your modem permanently."
+msgstr "Flash firmware sai có thể làm hỏng modem của bạn vĩnh viễn."
+
+msgid "Do not flash if you are not willing to take this risk."
+msgstr "Không flash nếu bạn không sẵn sàng chấp nhận rủi ro này."
+
+msgid "Additional notes..."
+msgstr "Lưu ý bổ sung..."
+
+msgid "After flashing, use AT&F command to factory reset modem settings."
+msgstr "Sau khi flash, sử dụng lệnh AT&F để đặt lại cài đặt modem về mặc định nhà máy."
+
+msgid "mPCIe users: If modem disappears after flashing, it may have switched to USB3 mode. Use mPCIe-to-USB adapter and send AT+QUSBCFG=\"SS\",0 to switch back to USB2."
+msgstr "Người dùng mPCIe: Nếu modem biến mất sau khi flash, nó có thể đã chuyển sang chế độ USB3. Sử dụng bộ chuyển đổi mPCIe sang USB và gửi AT+QUSBCFG=\"SS\",0 để chuyển lại về USB2."
+
+msgid "Continue"
+msgstr "Tiếp tục"
+
+msgid "Starting firmware flash process..."
+msgstr "Bắt đầu quá trình flash firmware..."
+
+msgid "Failed to start flash process: "
+msgstr "Không thể bắt đầu quá trình flash: "
+
+msgid "Firmware upgrade completed successfully!"
+msgstr "Nâng cấp firmware hoàn tất thành công!"
+
+msgid "Firmware upgrade failed."
+msgstr "Nâng cấp firmware thất bại."
+
+msgid "Refresh Devices"
+msgstr "Làm mới thiết bị"
+
+msgid "Refreshing..."
+msgstr "Đang làm mới..."
+
+msgid "Reset"
+msgstr "Đặt lại"
+
+msgid "Waiting for flash process to start..."
+msgstr "Đang chờ quá trình flash bắt đầu..."
+
+msgid "Capture USBMon Log"
+msgstr "Ghi nhật ký USBMon"
+
+msgid "Capture USB monitor log for debugging (-u)"
+msgstr "Ghi nhật ký giám sát USB để gỡ lỗi (-u)"
+
+msgid "Modem Model"
+msgstr "Model modem"
+
+msgid "Current Firmware"
+msgstr "Firmware hiện tại"
+
+msgid "Not detected"
+msgstr "Không phát hiện"
