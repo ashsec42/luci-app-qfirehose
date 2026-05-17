@@ -4,7 +4,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/4IceG/luci-app-qfirehose?style=flat-square)
 ![GitHub All Releases](https://img.shields.io/github/downloads/4IceG/luci-app-qfirehose/total)
 
-My package is fork from https://github.com/ntbowen/luci-app-qfirehose (I made minor corrections, visual changes and added a Polish translation).
+My package is fork from https://github.com/ntbowen/luci-app-qfirehose (My mod * socat → sms-tool).
 
 #### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="24"> A LuCI web interface for QFirehose, providing a user-friendly way to flash Quectel firmware on OpenWrt devices.
 
@@ -22,12 +22,10 @@ My package is fork from https://github.com/ntbowen/luci-app-qfirehose (I made mi
 ## Dependencies
 
 This package requires the following packages to be installed:
-- luci-base
-- qfirehose
-- unzip
-- kmod-usbmon
-- debugfs
-- luci-compat
+-luci-base
+-cgi-io
+-qfirehose
+-sms-tool
 
 
 ## Usage
@@ -41,7 +39,7 @@ This package requires the following packages to be installed:
 
 ### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="32"> Preview / <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="32"> Podgląd
 
-![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-qfirehose.png?raw=true)
+![]()
 
 
 ## <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="32"> Thanks to / <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="32"> Podziękowania dla
