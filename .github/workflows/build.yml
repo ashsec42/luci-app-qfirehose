@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
 
     env:
       SDK_URL: https://downloads.openwrt.org/releases/24.10.2/targets/ramips/mt7621/openwrt-sdk-24.10.2-ramips-mt7621_gcc-13.3.0_musl.Linux-x86_64.tar.zst
@@ -15,9 +15,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies
+        shell: bash
         run: |
-          sudo apt update
-          sudo apt install -y \
+          set -euxo pipefail
+          sudo apt-get update
+          sudo apt-get install -y \
             build-essential \
             clang \
             flex \
@@ -27,26 +29,25 @@ jobs:
             gcc-multilib \
             gettext \
             git \
-            libncurses-dev \
+            libncurses5-dev \
             libssl-dev \
             python3 \
-            python3-setuptools \
             rsync \
             unzip \
             wget \
             zstd \
             file
 
-      - name: Download SDK
+      - name: Download OpenWrt SDK
         run: |
-          wget "$SDK_URL" -O sdk.tar.zst
+          wget -O sdk.tar.zst "$SDK_URL"
           tar --zstd -xf sdk.tar.zst
           mv openwrt-sdk-* sdk
 
       - name: Copy package
         run: |
           mkdir -p sdk/package/qfirehose
-          rsync -a qfirehose/ sdk/package/qfirehose/
+          rsync -av qfirehose/ sdk/package/qfirehose/
 
       - name: Update feeds
         working-directory: sdk
@@ -60,13 +61,17 @@ jobs:
           echo "CONFIG_PACKAGE_qfirehose=m" >> .config
           make defconfig
 
-      - name: Compile
+      - name: Compile package
         working-directory: sdk
         run: |
-          make package/qfirehose/compile -j"$(nproc)" V=s
+          make package/qfirehose/compile V=s -j$(nproc)
 
-      - name: Upload IPK
+      - name: List generated packages
+        run: |
+          find sdk/bin -name "*.ipk"
+
+      - name: Upload IPKs
         uses: actions/upload-artifact@v4
         with:
           name: qfirehose-mipsel24kc
-          path: sdk/bin/packages/*/*/*.ipk
+          path: sdk/bin/packages/**/*.ipk
