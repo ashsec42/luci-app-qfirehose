@@ -1,4 +1,4 @@
-name: Build QFirehose (MT7621)
+name: Build QFirehose + LuCI (MT7621)
 
 on:
   workflow_dispatch:
@@ -44,10 +44,13 @@ jobs:
           tar --zstd -xf sdk.tar.zst
           mv openwrt-sdk-* sdk
 
-      - name: Copy package
+      - name: Copy packages
         run: |
           mkdir -p sdk/package/qfirehose
+          mkdir -p sdk/package/luci-app-qfirehose
+
           rsync -av qfirehose/ sdk/package/qfirehose/
+          rsync -av luci-app-qfirehose/ sdk/package/luci-app-qfirehose/
 
       - name: Update feeds
         working-directory: sdk
@@ -55,16 +58,20 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Enable package
+      - name: Enable packages
         working-directory: sdk
         run: |
-          echo "CONFIG_PACKAGE_qfirehose=m" >> .config
+          cat >> .config <<EOF
+          CONFIG_PACKAGE_qfirehose=m
+          CONFIG_PACKAGE_luci-app-qfirehose=m
+          EOF
+
           make defconfig
 
-      - name: Compile package
+      - name: Compile packages
         working-directory: sdk
         run: |
-          make package/qfirehose/compile V=s -j$(nproc)
+          make package/qfirehose/compile package/luci-app-qfirehose/compile V=s -j$(nproc)
 
       - name: List generated packages
         run: |
