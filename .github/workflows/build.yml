@@ -1,0 +1,73 @@
+name: Build QFirehose (MT7621)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    env:
+      SDK_URL: https://downloads.openwrt.org/releases/24.10.2/targets/ramips/mt7621/openwrt-sdk-24.10.2-ramips-mt7621_gcc-13.3.0_musl.Linux-x86_64.tar.zst
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y \
+            build-essential \
+            clang \
+            flex \
+            bison \
+            g++ \
+            gawk \
+            gcc-multilib \
+            gettext \
+            git \
+            libncurses5-dev \
+            libssl-dev \
+            python3 \
+            python3-distutils \
+            rsync \
+            unzip \
+            wget \
+            zstd \
+            file
+
+      - name: Download SDK
+        run: |
+          wget "$SDK_URL" -O sdk.tar.zst
+          tar --zstd -xf sdk.tar.zst
+          mv openwrt-sdk-* sdk
+
+      - name: Copy package
+        run: |
+          mkdir -p sdk/package/qfirehose
+          rsync -a qfirehose/ sdk/package/qfirehose/
+
+      - name: Update feeds
+        working-directory: sdk
+        run: |
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+
+      - name: Enable package
+        working-directory: sdk
+        run: |
+          echo "CONFIG_PACKAGE_qfirehose=m" >> .config
+          make defconfig
+
+      - name: Compile
+        working-directory: sdk
+        run: |
+          make package/qfirehose/compile -j$(nproc) V=s
+
+      - name: Upload IPK
+        uses: actions/upload-artifact@v4
+        with:
+          name: qfirehose-mipsel24kc
+          path: |
+            sdk/bin/packages/*/*/*.ipk
